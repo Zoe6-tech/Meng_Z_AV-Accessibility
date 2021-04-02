@@ -16,7 +16,7 @@
 
             showMediaDetails:false,
 
-            playing:false,
+            isPlaying:false,
 
             fullscreen : false,
 
@@ -40,25 +40,29 @@
             close(){
                 this.showMediaDetails = false;
                 this.$refs.myVideo.pause()
-                this.playing = false;
+                this.isPlaying = false;
               },
 
             play() {
+                //start media playback
                 this.$refs.myVideo.play()
-                this.playing = true;
+                this.isPlaying = true;
             },
 
             stop(){
+                //Pause the video playback
                 this.$refs.myVideo.pause()
-                this.playing = false;
+                this.isPlaying = false;
             },
 
             reply(){
-                this.$refs.myVideo.currentTime=0
-                this.playing = true;
+                // set the current time
+                this.$refs.myVideo.currentTime=0  // 0 minutes into the video
+                this.isPlaying = true;
             },
 
             expand(){
+                //increase the size of the video to full screen
                 this.$refs.myVideo.requestFullscreen()
                 this.fullscreen = true;
             }
