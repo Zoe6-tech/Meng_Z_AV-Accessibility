@@ -1,3 +1,36 @@
 body{
-    background-color: $main-bck-color;
+   background-image: url("../images/bck.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: $main-bck-color;
+   text-align: center;
+   color: $font-color;
+}
+
+h1{
+   font-size: 30px;
+   padding: 10px;
+}
+
+h2{
+    font-size: 25px;
+    padding: 5px;
+}
+
+.posters{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    img{
+        width: 70%;
+        opacity: 0.9;
+        border: 10px solid $blue;
+        box-shadow: $blue 0px 3px 8px;
+    }
+    img:hover{
+        opacity: 1;
+        box-shadow: $blue 0px 5px 15px;
+    }
 }

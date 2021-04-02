@@ -15,20 +15,20 @@
 </head>
 <body>
     <main id="app">
-        <h2 >{{ message }} </h2> <!-- @=v-on:-->
-        <h3 class="anotherMessage">{{anotherMessage}}</h3>
+        <h1 >{{ message }} </h1> <!-- @=v-on:-->
+        <h2 class="anotherMessage">{{anotherMessage}}</h2>
+
 
         <section id="container">
             <ul class="posters">
                 <li v-for="media in allMedia">
                     <a :href="media.media_src" @click.prevent="showMedia(media)">
                       <img :src="'images/' + media.media_poster" @v-on:click="logClicked" alt="poster">
-                    </a> 
-                    <video controls  :src="'images/' + media.media_src" alt="resource"></video>
-                     
+                    </a>
+                    <!-- <video controls  :src="'images/' + media.media_src" alt="resource"></video>
                     <h3>{{media.media_title}}</h3>
                     <h3>{{media.media_release}}</h3>
-                    <p>{{media.media_storyline}}</p>
+                    <p>{{media.media_storyline}}</p> -->
                 </li>
             </ul>
         </section>
@@ -37,13 +37,12 @@
         <section id="media" class="hide-media" v-bind:class="{'show-media':showMediaDetails}">
 
             <i class="fas fa-window-close"></i>
-<!-- 
-            <h3>{{media_title}}</h3>
 
-            
-            <h3>{{media_release}}</h3>
-            <p>{{media_storyline}}</p> -->
-            
+            <h3>{{ currentMediaData.media_title}}</h3>
+            <video controls  :src="'images/' + currentMediaData.media_src" alt="resource"></video>
+            <h3>{{currentMediaData.media_release}}</h3>
+            <p>{{currentMediaData.media_storyline}}</p> 
+
             <i class="fas fa-play"></i>
             <i class="fas fa-stop"></i>
             <i class="fas fa-reply"></i>
