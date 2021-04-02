@@ -1,5 +1,16 @@
 .fas{
-    color:$blue;
+    color:$middleblue;
     font-size: 40px;
-    padding: 5px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.fas:hover{
+    color:$blue;
+}
+
+.fa-window-close{
+    position: fixed;
+    top: 2%;
+    right: 2%;
 }

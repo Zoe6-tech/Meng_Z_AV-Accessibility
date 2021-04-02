@@ -1,35 +1,19 @@
 .hide-media{
     display:none;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-color: #F8F8F8;
-
-    h3{
-        font-size: 2em;
-        text-align: center;
-        padding: 20px;
-
-    }
-
-   
 
     video{
-        width: 500px;
-        height: 300px;
-        margin-left: 29vw;
-
+        width:60%;
+        height: auto;
+        margin: 0 auto;
     }
-
-    p{ text-align: center; font-size: 1.5em; margin-top: 20px;}
-
-  
    
 }
 
 
 .show-media{
     display: block;
-    position: absolute;
-
+    position: fixed;
+    top:0;
+    background-color: $main-bck-color;
+    width: 100%;
 }
