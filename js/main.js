@@ -1,6 +1,8 @@
 
 (()=>{
+    
     let vue_vm = new Vue({
+        
 
         data:{
             message:"Roku Flashback",
@@ -14,35 +16,52 @@
 
             showMediaDetails:false,
 
-            currentMediaData:{}
+            playing:false,
 
+            fullscreen : false,
 
+            currentMediaData:{},
 
        },
-             
-      
-
+            
         methods:{
+
             
             showMedia(target){
                 console.log('clicked to show Media detail',target, target.name);
-
                 this.showMediaDetails=this.showMediaDetails ? false:true 
-                this.currentMediaData = target 
+                this.currentMediaData = target; 
             },
 
             logClicked(){
-                console.log("clicked on a prof name");
+                console.log("clicked on a poster");
             },
 
             close(){
                 this.showMediaDetails = false;
+                this.$refs.myVideo.pause()
+                this.playing = false;
               },
-            
-        
-        },
 
-        components:{
+            play() {
+                this.$refs.myVideo.play()
+                this.playing = true;
+            },
+
+            stop(){
+                this.$refs.myVideo.pause()
+                this.playing = false;
+            },
+
+            reply(){
+                this.$refs.myVideo.currentTime=0
+                this.playing = true;
+            },
+
+            expand(){
+                this.$refs.myVideo.requestFullscreen()
+                this.fullscreen = true;
+            }
             
         }
 
