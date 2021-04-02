@@ -33,7 +33,11 @@
 
             logClicked(){
                 console.log("clicked on a prof name");
-            }
+            },
+
+            close(){
+                this.showMediaDetails = false;
+              },
             
         
         },
