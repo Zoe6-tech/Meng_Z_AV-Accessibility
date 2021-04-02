@@ -24,10 +24,9 @@
                     <a :href="media.media_src" @click.prevent="showMedia(media)">
                       <img :src="'images/' + media.media_poster" @v-on:click="logClicked" alt="poster">
                     </a> 
-                    <video ref="videoEL"  controls  :src="'images/' + media.media_src" alt="resource"></video>       
+                    <video controls  :src="'images/' + media.media_src" alt="resource"></video>
+                     
                     <h3>{{media.media_title}}</h3>
-
-                    
                     <h3>{{media.media_release}}</h3>
                     <p>{{media.media_storyline}}</p>
                 </li>
