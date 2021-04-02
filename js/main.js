@@ -14,6 +14,8 @@
 
             showMediaDetails:false,
 
+            currentMediaData:{}
+
 
 
        },
@@ -22,9 +24,12 @@
 
         methods:{
             
-            showMedia(){
+            showMedia(target){
+                console.log('clicked to show Media detail',target, target.name);
 
-                },
+                this.showMediaDetails=this.showMediaDetails ? false:true 
+                this.currentMediaData = target 
+            },
 
             logClicked(){
                 console.log("clicked on a prof name");
