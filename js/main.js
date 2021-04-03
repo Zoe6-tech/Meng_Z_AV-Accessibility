@@ -18,7 +18,7 @@
 
             isPlaying:false,
 
-            fullscreen : false,
+            isFullscreen : false,
 
             currentMediaData:{},
 
@@ -49,7 +49,7 @@
                 this.isPlaying = true;
             },
 
-            stop(){
+            pause(){
                 //Pause the video playback
                 this.$refs.myVideo.pause()
                 this.isPlaying = false;
@@ -64,7 +64,7 @@
             expand(){
                 //increase the size of the video to full screen
                 this.$refs.myVideo.requestFullscreen()
-                this.fullscreen = true;
+                this.isFullscreen = true;
             }
             
         }
