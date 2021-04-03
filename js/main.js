@@ -1,9 +1,30 @@
+// import VideoCard from "./components/TheVideoComponent.js";
 
 (()=>{
-    
+    Vue.component("media-card", {
+        props:['media'],
+
+        template:`
+
+                <li @click="logClicked">
+                   
+                      <img :src="'images/' + media.media_poster"  alt="poster">
+                  
+                </li>
+            
+        `,
+
+        methods:{
+            logClicked(){
+                this.$emit("show", this.media)
+            }
+        }     
+            
+    })
+
+
     let vue_vm = new Vue({
         
-
         data:{
             message:"Roku Flashback",
             anotherMessage:" There is a nostalgia here, the channel are filled with old films and songs. ",
@@ -33,9 +54,7 @@
                 this.currentMediaData = target; 
             },
 
-            logClicked(){
-                console.log("clicked on a poster");
-            },
+
 
             close(){
                 this.showMediaDetails = false;
@@ -67,7 +86,11 @@
                 this.isFullscreen = true;
             }
             
-        }
+        },
+
+        // components:{
+        //     "media-card":VideoCard
+        // }
 
     }).$mount("#app");
      
