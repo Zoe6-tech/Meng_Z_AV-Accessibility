@@ -20,9 +20,9 @@
 <body>
     <main id="app">
 
-        <section id="music-card">
-            <ul class="posters">
-                <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+    <section id="music-card">
+            <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+            <ul class="posters">   
                 <media-card @show="showMedia" v-for="media in allMusic"  :media="media" :key="media.media_title">
                 </media-card>
                 
@@ -33,21 +33,29 @@
                     </a>
                 </li> -->
             </ul>
-        </section>
+        
 
         <section id="media" class="hide-media" v-bind:class="{'show-media':showMediaDetails}">
             <i class="fas fa-times" @click="close" ></i>
-            <h3>{{ currentMediaData.media_title}}</h3>  
-            <img :src="'images/' + currentMediaData.media_poster">
-            <audio ref="myVideo" controls :src="'video/' + currentMediaData.media_src" alt="resource"></audio>
-            <i class="fas fa-play" @click="play"></i>
-            <i class="fas fa-pause" @click="pause"></i>
-            <i class="fas fa-reply" @click="reply"></i>
-            <i class="fas fa-expand" @click="expand"></i>
+            <h3>{{ currentMediaData.media_title}}</h3> 
+            <h4>{{currentMediaData.media_release}}</h4> 
+            <img :src="'images/' + currentMediaData.media_poster" class="rotate">
 
-            <h4>{{currentMediaData.media_release}}</h4>
-            <p>{{currentMediaData.media_storyline}}</p> 
+            <div class="media-fas">
+                <audio ref="myVideo" autoplay :src="'audio/' + currentMediaData.media_src" alt="resource"></audio>
+
+                <div class="media-controller">
+                    <i class="fas fa-play" @click="play"></i>
+                    <i class="fas fa-pause" @click="pause"></i>
+                    <i class="fas fa-reply" @click="reply"></i>
+                    <i class="fas fa-expand" @click="expand"></i>
+                </div>
+            </div>
+            
+
+           
         </section>
+    </section>
 
     </main>
 

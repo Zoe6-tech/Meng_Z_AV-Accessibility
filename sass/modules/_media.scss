@@ -2,19 +2,27 @@
 .hide-media{
     display:none;
 
+
+}
+
+
+.show-media{
+    display: flex;
+    flex-direction: column;
+    display: block;
+    position: fixed;
+    top:0;
+    background-image: url("../images/bck.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: $main-bck-color;
     video{
         width:50%;
-        height: auto;
         margin:2% auto;
     }
    
 }
 
 
-.show-media{
-    display: block;
-    position: fixed;
-    top:0;
-    background-color: $main-bck-color;
-    width: 100%;
-}
+
+

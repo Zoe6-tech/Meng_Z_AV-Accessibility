@@ -6,7 +6,18 @@ body{
    text-align: center;
    color: $font-color;
    font-family: $font-family;
+   height: auto;
  
+}
+
+.index{
+    margin: 5% auto;
+    width: 80%;
+    .fas{
+        font-size: 150px;
+        cursor: pointer;
+        margin:5%;
+    }
 }
 
 h1{
@@ -42,7 +53,7 @@ p{
 
 .posters{
     width: 90%;
-    margin: 1%;
+    margin: 7% auto;
     display: flex;
     flex-wrap: wrap;
     
@@ -57,3 +68,4 @@ p{
         box-shadow: $blue 0px 5px 15px;
     }
 }
+
