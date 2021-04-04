@@ -14,7 +14,7 @@ export default{
 
             <li @click="logClicked">
 
-                <h3>{{media.media_title}}</h3>       
+                <h3>{{media.media_type}}</h3>       
                 <img :src="'images/' + media.media_poster"  alt="poster">
               
             </li>

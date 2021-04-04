@@ -19,40 +19,15 @@
 </head>
 <body>
     <main id="app">
-        <h1 >{{ message }} </h1> <!-- @=v-on:-->
-        <h2 class="anotherMessage">{{anotherMessage}}</h2>
-        <i class="fas fa-film"></i>
-        <i class="fas fa-music"></i>
-
-
-        <section id="container">
-            <ul class="posters">
-                
-                  <media-card @show="showMedia" v-for="media in allMedia"  :media="media" :key="media.media_title">
-                  </media-card>
-                
-                <!-- <li v-for="media in allMedia">
-                    <h3>{{media.media_title}}</h3>
-                    <a :href="media.media_src" @click.prevent="showMedia(media)">
-                      <img :src="'images/' + media.media_poster" @click="logClicked" alt="poster">
-                    </a>
-                </li> -->
-            </ul>
+        <section class="index">
+            <h1>{{name}}</h1>
+            <h4>{{ message }} </h4> <!-- @=v-on:-->
+            <a href="video.html"><i class="fas fa-film" ></i></a>
+            <a href="music.html"><i class="fas fa-music"></i></a>
+            <h2 class="anotherMessage">{{anotherMessage}}</h2>
         </section>
-
-        <section id="media" class="hide-media" v-bind:class="{'show-media':showMediaDetails}">
-            <i class="fas fa-times" @click="close" ></i>
-            <h3>{{ currentMediaData.media_title}}</h3>  
-            <video ref="myVideo" controls :src="'video/' + currentMediaData.media_src" alt="resource"></video>
-            <i class="fas fa-play" @click="play"></i>
-            <i class="fas fa-pause" @click="pause"></i>
-            <i class="fas fa-reply" @click="reply"></i>
-            <i class="fas fa-expand" @click="expand"></i>
-
-            <h4>{{currentMediaData.media_release}}</h4>
-            <p>{{currentMediaData.media_storyline}}</p> 
-        </section>
-
+        
+        
     </main>
 
     
