@@ -19,9 +19,9 @@
 <body>
     <main id="app">
 
-        <section id="video-card">
+    <section id="video-card">
+            <a href="index.html"><i class="fas fa-chevron-left"></i></a>
             <ul class="posters">
-                  <a href="index.html"><i class="fas fa-chevron-left"></i></a>
                   <media-card @show="showMedia" v-for="media in allVideo"  :media="media" :key="media.media_title">
                   </media-card>
                 
@@ -32,20 +32,26 @@
                     </a>
                 </li> -->
             </ul>
-        </section>
+        
 
         <section id="media" class="hide-media" v-bind:class="{'show-media':showMediaDetails}">
             <i class="fas fa-times" @click="close" ></i>
-            <h3>{{ currentMediaData.media_title}}</h3>  
-            <video ref="myVideo" controls :src="'video/' + currentMediaData.media_src" alt="resource"></video>
-            <i class="fas fa-play" @click="play"></i>
-            <i class="fas fa-pause" @click="pause"></i>
-            <i class="fas fa-reply" @click="reply"></i>
-            <i class="fas fa-expand" @click="expand"></i>
+            <h3>{{ currentMediaData.media_title}}</h3>
+            <h4>{{currentMediaData.media_release}}</h4>  
+            
+            <div class="media-fas">
+                <video ref="myVideo"  :src="'video/' + currentMediaData.media_src" alt="resource"></video>
 
-            <h4>{{currentMediaData.media_release}}</h4>
-            <p>{{currentMediaData.media_storyline}}</p> 
+                <div class="media-controller">
+                    <i class="fas fa-play" @click="play"></i>
+                    <i class="fas fa-pause" @click="pause"></i>
+                    <i class="fas fa-reply" @click="reply"></i>
+                    <i class="fas fa-expand" @click="expand"></i>
+                </div>
+            </div>
+
         </section>
+    </section>
 
     </main>
 

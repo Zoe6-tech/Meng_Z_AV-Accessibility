@@ -1,4 +1,13 @@
-.video-card{
-    width: 70%;
-    margin: 5% auto;
+#video-card{
+    width: 100%;
+    height: auto;
+    .show-media{
+        width: 90%;
+        margin: 2% auto;
+        img {
+            border-radius: 50%;
+            width: 30%;
+            margin: 1%;
+          }
+    }
 }
