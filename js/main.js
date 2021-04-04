@@ -1,26 +1,27 @@
-// import VideoCard from "./components/TheVideoComponent.js";
+import VideoCard from "./components/TheVideoComponent.js";
 
 (()=>{
-    Vue.component("media-card", {
-        props:['media'],
 
-        template:`
+    // Vue.component("media-card", {
+    //     props:['media'],
 
-                <li @click="logClicked">
-                   
-                      <img :src="'images/' + media.media_poster"  alt="poster">
+    //     template:`
+
+    //             <li @click="logClicked">
+    //               <h3>{{media.media_title}}</h3>
+    //                   <img :src="'images/' + media.media_poster"  alt="poster">
                   
-                </li>
+    //             </li>
             
-        `,
+    //     `,
 
-        methods:{
-            logClicked(){
-                this.$emit("show", this.media)
-            }
-        }     
+    //     methods:{
+    //         logClicked(){
+    //             this.$emit("show", this.media)
+    //         }
+    //     }     
             
-    })
+    // })
 
 
     let vue_vm = new Vue({
@@ -88,9 +89,9 @@
             
         },
 
-        // components:{
-        //     "media-card":VideoCard
-        // }
+        components:{
+            "media-card":VideoCard
+        }
 
     }).$mount("#app");
      
