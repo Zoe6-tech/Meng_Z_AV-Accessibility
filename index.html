@@ -43,7 +43,7 @@
         <section id="media" class="hide-media" v-bind:class="{'show-media':showMediaDetails}">
             <i class="fas fa-times" @click="close" ></i>
             <h3>{{ currentMediaData.media_title}}</h3>  
-            <video ref="myVideo" autoplay :src="'images/' + currentMediaData.media_src" alt="resource"></video>
+            <video ref="myVideo" controls :src="'video/' + currentMediaData.media_src" alt="resource"></video>
             <i class="fas fa-play" @click="play"></i>
             <i class="fas fa-pause" @click="pause"></i>
             <i class="fas fa-reply" @click="reply"></i>
@@ -56,7 +56,7 @@
     </main>
 
     
-    <script src="js/main.js"  type="module"></script>
+    <script defer src="js/main.js"  type="module"></script>
     
 </body>
 </html>
