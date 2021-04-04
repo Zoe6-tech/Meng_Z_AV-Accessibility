@@ -40,7 +40,7 @@
             <h4>{{currentMediaData.media_release}}</h4>  
             
             <div class="media-fas">
-                <video ref="myVideo"  :src="'video/' + currentMediaData.media_src" alt="resource"></video>
+                <video ref="myMedia" autoplay :src="'video/' + currentMediaData.media_src" alt="resource"></video>
 
                 <div class="media-controller">
                     <i class="fas fa-play" @click="play"></i>
