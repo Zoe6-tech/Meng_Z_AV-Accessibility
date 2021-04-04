@@ -64,31 +64,31 @@ import MediaCard from "./components/TheMediaComponent.js";
 
             close(){
                 this.showMediaDetails = false;
-                this.$refs.myVideo.pause()
+                this.$refs.myMedia.pause()
                 this.isPlaying = false;
               },
 
             play() {
                 //start media playback
-                this.$refs.myVideo.play()
+                this.$refs.myMedia.play()
                 this.isPlaying = true;
             },
 
             pause(){
                 //Pause the video playback
-                this.$refs.myVideo.pause()
+                this.$refs.myMedia.pause()
                 this.isPlaying = false;
             },
 
             reply(){
                 // set the current time
-                this.$refs.myVideo.currentTime=0  // 0 minutes into the video
+                this.$refs.myMedia.currentTime=0  // 0 minutes into the video
                 this.isPlaying = true;
             },
 
             expand(){
                 //increase the size of the video to full screen
-                this.$refs.myVideo.requestFullscreen()
+                this.$refs.myMedia.requestFullscreen()
                 this.isFullscreen = true;
             }
             

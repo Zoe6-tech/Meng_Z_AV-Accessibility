@@ -17,8 +17,9 @@
     background-size: cover;
     background-color: $main-bck-color;
     video{
-        width:50%;
+        width:60%;
         margin:2% auto;
+        border: 10px solid $blue;
     }
    
 }

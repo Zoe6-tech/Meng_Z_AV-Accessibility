@@ -42,7 +42,7 @@
             <img :src="'images/' + currentMediaData.media_poster" class="rotate">
 
             <div class="media-fas">
-                <audio ref="myVideo" autoplay :src="'audio/' + currentMediaData.media_src" alt="resource"></audio>
+                <audio ref="myMedia" autoplay :src="'audio/' + currentMediaData.media_src" alt="resource"></audio>
 
                 <div class="media-controller">
                     <i class="fas fa-play" @click="play"></i>

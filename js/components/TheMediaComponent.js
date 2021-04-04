@@ -1,6 +1,6 @@
 export default{
 
-    name:"TheVideoCard",
+    name:"TheMeidaCard",
   
     props:['media'],
 
