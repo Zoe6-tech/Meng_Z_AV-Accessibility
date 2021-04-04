@@ -7,7 +7,8 @@
 
 [Vue refs tutorial](https://blog.logrocket.com/vue-refs-accessing-dom-elements/)
 
-
+### Others
+[CORS request not http](https://support.mozilla.org/en-US/questions/1264280)
 
 ## Technologies
 * Visual Studio Code
